@@ -1,4 +1,4 @@
-package Omnibase;
+package com;
 
 /*
  * Each Table class implements the ITable interface, so that
@@ -27,9 +27,18 @@ class FileSystemTable implements ITable
     }
 
     /*
+     * deletes a record (file system object) that has the given field name.
+     * This is the equivalent of deleting a whole record in Oracle.
+     * // TODO: implement
+     */
+    public void deleteRecord(String key, String val)
+    {
+    }
+
+    /*
      * TODO: Implement thread-safe increment.
      */
-    public void createRecord(String tableName)
+    public void createRecord( String key, String val )
     {
         this.countOfRecords++;
     }

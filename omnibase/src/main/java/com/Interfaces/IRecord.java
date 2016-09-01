@@ -1,4 +1,4 @@
-package Omnibase;
+package com;
 /*
  * This interface is a set of common CRUD applications expected in all records.
  * Records are responsible for all CRUD actions on Data.

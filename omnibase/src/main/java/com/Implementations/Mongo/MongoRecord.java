@@ -1,4 +1,4 @@
-package Omnibase;
+package com;
 
 /*
  * Each Record class implements the IRecord interface, so that
@@ -12,7 +12,7 @@ class MongoRecord implements IRecord
      */
     public MongoRecord(String name)
     {
-        System.out.println("Creating a new Mongo document");
+        System.out.println("Creating a new (empty) Mongo document");
     }
 
 }

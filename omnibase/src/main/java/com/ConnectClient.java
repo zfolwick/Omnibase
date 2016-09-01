@@ -1,4 +1,4 @@
-package Omnibase;
+package com;
 
 import java.util.List;
 /*
@@ -6,7 +6,7 @@ import java.util.List;
  * common set of methods within which users may interface with a database.  The methods here are the only methods
  * a consumer of this class should need in order to interact with multiple different data sources.
  */
-class ConnectClient
+public class ConnectClient
 {
     /*
      * Consumers need to connect to a data store.  This could be mongo, oracle, fileSystem, Cassandra... whatever.
@@ -30,6 +30,13 @@ class ConnectClient
         return this.strategy.createDatabase(name);
     }
 
+    /*
+     * deletes the specified database
+     */
+    public void dropDatabase(String name)
+    {
+        this.strategy.dropDatabase(name);
+    }
     /*
      * Returns an IDatabase object that can then be used to perform database operations
      */

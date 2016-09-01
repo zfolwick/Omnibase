@@ -1,4 +1,4 @@
-package Omnibase;
+package com;
 
 import java.util.List;
 /*
@@ -11,6 +11,7 @@ interface IDataConnection
     List<String> getDatabaseNames();
 
     IDatabase createDatabase(String namme);
+    void dropDatabase(String name);
     IDatabase useDatabase(String name);
 }
 

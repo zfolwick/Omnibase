@@ -1,4 +1,4 @@
-package Omnibase;
+package com;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -46,6 +46,14 @@ class FileSystemConnection implements IDataConnection
         this.databases = new ArrayList<IDatabase>();
         this.databases.add( dbo );
         return dbo;
+    }
+
+    /*
+     * deletes the specified database
+     */
+    public void dropDatabase(String name)
+    {
+        System.out.println("THIS FEATURE HASN'T BEEN IMPLEMENTED FOR FILESYSTEM DATABASES");
     }
 
     /*

@@ -1,13 +1,14 @@
-package Omnibase;
+package com;
 
 import java.util.List;
 import java.util.ArrayList;
+
 /*
  * Each Database class implements the IDatabase interface, so that
  * each of the database objects are seen as the same type.
  * Database objects are responsible for CRUD operations on Tables.
  */
-class MongoDatabase implements IDatabase
+class FileSystemDatabase implements IDatabase
 {
     private String databaseName;
     private List<ITable> tables = new ArrayList<ITable>();
@@ -29,12 +30,12 @@ class MongoDatabase implements IDatabase
     }
 
     /*
-     * creates a new mongo database within mongo with the given name
+     * creates a new FileSystem database within FileSystem with the given name
      */
-    public MongoDatabase(String name)
+    public FileSystemDatabase(String name)
     {
-        // mongo specific code goes here.
-        System.out.println("creating new mongo database");
+        // FileSystem specific code goes here.
+        System.out.println("creating new FileSystem database");
         this.databaseName = name;
     }
 
@@ -44,11 +45,12 @@ class MongoDatabase implements IDatabase
      */
     public ITable createTable(String name)
     {
-        System.out.println("Creating new Mongo Table name: " + name + ", in database " + this.databaseName);
+        System.out.println("Creating new FileSystem Table name: " + name + ", in database " + this.databaseName);
 
-        ITable tbl = new MongoTable(name);
+        ITable tbl = new FileSystemTable(name);
         this.tables.add( tbl );
         return tbl;
     }
 }
+
 
