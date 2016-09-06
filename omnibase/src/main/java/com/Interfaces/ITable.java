@@ -47,7 +47,9 @@ interface ITable
      *   - Rows are defined to be the value of an array at index i.
      *
      *   Queries:
-     *   - A query is a request made to a database.  It will return all information possible, given certain filters on the data.
+     *   - A query is a request made to a database connection.  It will return all information possible, given certain filters on the data.
+     *   - A database connection executes queries against it's db connection.  It passes the query into it's local parsing engine and returns an expected query result.
+     *
      */
 }
 
