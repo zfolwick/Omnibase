@@ -10,7 +10,7 @@ import com.mongodb.client.MongoDatabase;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class BasicMongoTest
     extends TestCase
 {
     static final String expectedDBName = "MONGO_DATABASE";
@@ -20,7 +20,7 @@ public class AppTest
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
+    public BasicMongoTest( String testName )
     {
         super( testName );
     }
@@ -30,7 +30,7 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( BasicMongoTest.class );
     }
 
     // Can set the database to use, and thus create a table without specifying the database.
